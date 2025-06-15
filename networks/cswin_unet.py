@@ -20,6 +20,7 @@ class Mlp(nn.Module):
         self.drop = nn.Dropout(drop)
 
     def forward(self, x):
+        print("123456789", x.shape)
         x = self.fc1(x)
         x = self.act(x)
         x = self.drop(x)
